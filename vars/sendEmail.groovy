@@ -1,8 +1,5 @@
 import hudson.plugins.emailext.ExtendedEmailPublisher
 
-def sendEmail(String subject, String mimeType = 'text/plain', boolean attachLog = false) {
-    emailext subject: subject,
-             to: ${params.recipientEmail},
-             mimeType: mimeType,
-             attachLog: attachLog
+def call() {
+    emailext body: 'Build Thành Công1', compressLog: true, subject: 'Test', to: 'ha.ptt1707@gmail.com'
 }
