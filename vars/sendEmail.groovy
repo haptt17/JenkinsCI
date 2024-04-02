@@ -1,5 +1,5 @@
 import hudson.plugins.emailext.ExtendedEmailPublisher
-
+def email= params.recipientEmail
 def call() {
-    emailext body: 'Build Thành Công1', compressLog: true, subject: 'Test', to: 'ha.ptt1707@gmail.com'
+    emailext body: 'Build Thành Công1', compressLog: true, subject: 'Test', to: ${email}
 }
